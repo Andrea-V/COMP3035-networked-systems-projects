@@ -1,0 +1,225 @@
+1,2c1,2
+< Loading configuration : test5.cfg
+< Reading file test5.cfg
+---
+> Loading configuration : test5_mod.cfg
+> Reading file test5_mod.cfg
+4,29c4,29
+< Created Router 0 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 1 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 2 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 3 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 4 has 5 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 5 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 6 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 7 has 8 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 8 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 9 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 10 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 11 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 12 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 13 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 14 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 15 has 4 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 16 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 17 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 18 has 4 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 19 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 20 has 8 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 21 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 22 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 23 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 24 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 25 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+---
+> Created Router 0 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 1 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 2 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 3 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 4 has 5 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 5 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 6 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 7 has 8 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 8 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 9 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 10 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 11 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 12 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 13 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 14 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 15 has 4 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 16 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 17 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 18 has 4 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 19 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 20 has 8 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 21 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 22 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 23 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 24 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 25 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+1181a1182
+> d 16 i 0 m 55
+1208c1209
+< d 16 i 0 m 35
+---
+> d 16 i 0 m 60
+1234a1236
+> d 16 i 7 m 60
+1317c1319
+< d 16 i 0 m 45
+---
+> d 16 i 0 m 60
+1346c1348
+< d 16 i 0 m 46
+---
+> d 16 i 0 m 60
+1373c1375
+< d 16 i 0 m 28
+---
+> d 16 i 0 m 60
+1400c1402
+< d 16 i 0 m 35
+---
+> d 16 i 0 m 60
+1454c1456
+< d 16 i 1 m 36
+---
+> d 16 i 2 m 47
+1480a1483
+> d 16 i 2 m 60
+1512c1515
+< d 16 i 0 m 42
+---
+> d 16 i 0 m 60
+1539c1542
+< d 16 i 0 m 41
+---
+> d 16 i 0 m 52
+1566c1569
+< d 16 i 2 m 41
+---
+> d 16 i 2 m 60
+1593c1596
+< d 16 i 1 m 40
+---
+> d 16 i 2 m 60
+1647c1650
+< d 16 i 0 m 31
+---
+> d 16 i 0 m 60
+1674c1677
+< d 16 i 0 m 31
+---
+> d 16 i 0 m 60
+1701c1704
+< d 16 i 7 m 33
+---
+> d 16 i 7 m 60
+1890c1893
+< d 16 i 0 m 40
+---
+> d 16 i 0 m 60
+1917c1920
+< d 16 i 0 m 49
+---
+> d 16 i 0 m 60
+1946c1949
+< d 16 i 0 m 50
+---
+> d 16 i 0 m 60
+1973c1976
+< d 16 i 0 m 32
+---
+> d 16 i 0 m 60
+2000c2003
+< d 16 i 0 m 33
+---
+> d 16 i 0 m 60
+2027c2030
+< d 16 i 1 m 31
+---
+> d 16 i 1 m 60
+2054c2057
+< d 16 i 0 m 31
+---
+> d 16 i 0 m 60
+2081c2084
+< d 16 i 0 m 32
+---
+> d 16 i 0 m 60
+2108c2111
+< d 16 i 0 m 32
+---
+> d 16 i 0 m 60
+2135c2138
+< d 16 i 0 m 32
+---
+> d 16 i 0 m 60
+2162c2165
+< d 16 i 0 m 32
+---
+> d 16 i 0 m 60
+2323d2325
+< d 16 i 2 m 60
+2350d2351
+< d 16 i 0 m 60
+2377d2377
+< d 16 i 0 m 60
+2404d2403
+< d 16 i 7 m 60
+2431d2429
+< d 16 i 0 m 60
+2458d2455
+< d 16 i 0 m 60
+2485d2481
+< d 16 i 0 m 60
+2512d2507
+< d 16 i 0 m 60
+2539d2533
+< d 16 i 0 m 60
+2698d2691
+< d 16 i 0 m 60
+2725d2717
+< d 16 i 1 m 60
+2988d2979
+< d 16 i 2 m 60
+3015d3005
+< d 16 i 0 m 60
+3042d3031
+< d 16 i 0 m 60
+3095d3083
+< d 16 i 0 m 60
+3122d3109
+< d 16 i 0 m 60
+3149d3135
+< d 16 i 0 m 60
+3176d3161
+< d 16 i 0 m 60
+3203d3187
+< d 16 i 0 m 60
+3388d3371
+< d 16 i 1 m 60
+3415d3397
+< d 16 i 0 m 60
+4503a4486,4487
+> d 18 i 0 m 3
+> d 19 i 0 m 4
+4571a4556,4566
+> d 7 i 0 m 3
+> d 8 i 0 m 4
+> d 9 i 0 m 4
+> d 10 i 0 m 4
+> d 11 i 0 m 4
+> d 12 i 0 m 4
+> d 13 i 0 m 13
+> d 14 i 0 m 14
+> d 15 i 0 m 23
+> d 16 i 0 m 24
+> d 17 i 0 m 24
+4611,4612d4605
+< d 18 i 0 m 54
+< d 19 i 0 m 55
+4641,4642d4633
+< d 18 i 1 m 53
+< d 19 i 1 m 54

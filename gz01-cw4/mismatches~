@@ -1,0 +1,778 @@
+1,2c1,2
+< Loading configuration : test5.cfg
+< Reading file test5.cfg
+---
+> Loading configuration : test5_mod.cfg
+> Reading file test5_mod.cfg
+4,29c4,29
+< Created Router 0 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 1 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 2 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 3 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 4 has 5 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 5 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 6 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 7 has 8 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 8 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 9 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 10 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 11 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 12 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 13 has 3 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 14 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 15 has 4 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 16 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 17 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 18 has 4 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 19 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 20 has 8 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 21 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 22 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 23 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 24 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+< Created Router 25 has 1 interfaces and uses class DV update interval 1, split horizon + poison reverse: on expire entries on
+---
+> Created Router 0 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 1 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 2 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 3 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 4 has 5 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 5 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 6 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 7 has 8 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 8 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 9 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 10 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 11 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 12 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 13 has 3 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 14 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 15 has 4 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 16 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 17 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 18 has 4 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 19 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 20 has 8 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 21 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 22 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 23 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 24 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+> Created Router 25 has 1 interfaces and uses class DVsolution update interval 1, split horizon + poison reverse: on expire entries on
+692d691
+< d 16 i 1 m 60
+703,718d701
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+720,728d702
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+936d909
+< d 16 i 1 m 60
+947,962d919
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+964,972d920
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+990d937
+< d 16 i 0 m 60
+1071d1017
+< d 16 i 2 m 60
+1192,1207d1137
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+1209,1217d1138
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+1235d1155
+< d 16 i 0 m 60
+1410,1425d1329
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+1427,1435d1330
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+2036,2051d1930
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+2053,2061d1931
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+2352d2221
+< d 16 i 0 m 60
+2379d2247
+< d 16 i 0 m 60
+2406d2273
+< d 16 i 2 m 60
+2433d2299
+< d 16 i 1 m 60
+2460d2325
+< d 16 i 2 m 60
+2487d2351
+< d 16 i 0 m 60
+2514d2377
+< d 16 i 0 m 60
+2541d2403
+< d 16 i 7 m 60
+2568d2429
+< d 16 i 0 m 60
+2595d2455
+< d 16 i 0 m 60
+2622d2481
+< d 16 i 0 m 60
+2649d2507
+< d 16 i 0 m 60
+2676d2533
+< d 16 i 0 m 60
+2703d2559
+< d 16 i 0 m 60
+2730d2585
+< d 16 i 0 m 60
+2757d2611
+< d 16 i 0 m 60
+2768,2783d2621
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+2785,2793d2622
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+2811d2639
+< d 16 i 0 m 60
+2838d2665
+< d 16 i 0 m 60
+2865d2691
+< d 16 i 0 m 60
+2892d2717
+< d 16 i 1 m 60
+2946d2770
+< d 16 i 0 m 60
+2973d2796
+< d 16 i 0 m 60
+3000d2822
+< d 16 i 0 m 60
+3027d2848
+< d 16 i 0 m 60
+3055d2875
+< d 16 i 0 m 60
+3082d2901
+< d 16 i 0 m 60
+3109d2927
+< d 16 i 2 m 60
+3136d2953
+< d 16 i 1 m 60
+3163d2979
+< d 16 i 2 m 60
+3190d3005
+< d 16 i 0 m 60
+3217d3031
+< d 16 i 0 m 60
+3244d3057
+< d 16 i 7 m 60
+3271d3083
+< d 16 i 0 m 60
+3298d3109
+< d 16 i 0 m 60
+3325d3135
+< d 16 i 0 m 60
+3352d3161
+< d 16 i 0 m 60
+3379d3187
+< d 16 i 0 m 60
+3406d3213
+< d 16 i 0 m 60
+3433d3239
+< d 16 i 0 m 60
+3460d3265
+< d 16 i 0 m 60
+3471,3486d3275
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+3488,3496d3276
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+3514d3293
+< d 16 i 0 m 60
+3541d3319
+< d 16 i 0 m 60
+3568d3345
+< d 16 i 0 m 60
+3595d3371
+< d 16 i 1 m 60
+3622d3397
+< d 16 i 0 m 60
+3649d3423
+< d 16 i 0 m 60
+3676d3449
+< d 16 i 0 m 60
+3703d3475
+< d 16 i 0 m 60
+3730d3501
+< d 16 i 0 m 60
+4835,4847d4605
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+4862,4874d4619
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+4889,4901d4633
+< d 7 i 2 m 60
+< d 8 i 2 m 60
+< d 9 i 2 m 60
+< d 10 i 2 m 60
+< d 11 i 2 m 60
+< d 12 i 2 m 60
+< d 13 i 2 m 60
+< d 14 i 2 m 60
+< d 15 i 2 m 60
+< d 16 i 2 m 60
+< d 17 i 2 m 60
+< d 18 i 1 m 60
+< d 19 i 1 m 60
+4916,4928d4647
+< d 7 i 2 m 60
+< d 8 i 2 m 60
+< d 9 i 2 m 60
+< d 10 i 2 m 60
+< d 11 i 2 m 60
+< d 12 i 2 m 60
+< d 13 i 2 m 60
+< d 14 i 2 m 60
+< d 15 i 2 m 60
+< d 16 i 2 m 60
+< d 17 i 2 m 60
+< d 18 i 1 m 60
+< d 19 i 1 m 60
+4943,4955d4661
+< d 7 i 4 m 60
+< d 8 i 4 m 60
+< d 9 i 4 m 60
+< d 10 i 4 m 60
+< d 11 i 4 m 60
+< d 12 i 4 m 60
+< d 13 i 4 m 60
+< d 14 i 4 m 60
+< d 15 i 4 m 60
+< d 16 i 4 m 60
+< d 17 i 4 m 60
+< d 18 i 3 m 60
+< d 19 i 3 m 60
+4970,4982d4675
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+4997,5009d4689
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5017,5023d4696
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5035,5042d4707
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5044,5050d4708
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5062,5069d4719
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5071,5077d4720
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5089,5096d4731
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5098,5104d4732
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5116,5123d4743
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5125,5131d4744
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5143,5150d4755
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5152,5158d4756
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5170,5177d4767
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5179,5185d4768
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5197,5204d4779
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5206,5212d4780
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5224,5231d4791
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5233,5239d4792
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5251,5258d4803
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5260,5266d4804
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5278,5285d4815
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5287,5293d4816
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+5305,5312d4827
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5314,5331d4828
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+5334,5339d4830
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5341,5358d4831
+< d 0 i 0 m 60
+< d 1 i 0 m 60
+< d 2 i 0 m 60
+< d 3 i 0 m 60
+< d 4 i 0 m 60
+< d 5 i 0 m 60
+< d 6 i 0 m 60
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+5361,5366d4833
+< d 20 i 0 m 60
+< d 21 i 0 m 60
+< d 22 i 0 m 60
+< d 23 i 0 m 60
+< d 24 i 0 m 60
+< d 25 i 0 m 60
+5375,5387d4841
+< d 7 i 1 m 60
+< d 8 i 1 m 60
+< d 9 i 1 m 60
+< d 10 i 1 m 60
+< d 11 i 1 m 60
+< d 12 i 1 m 60
+< d 13 i 1 m 60
+< d 14 i 1 m 60
+< d 15 i 1 m 60
+< d 16 i 1 m 60
+< d 17 i 1 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5402,5414d4855
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5429,5441d4869
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5456,5468d4883
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5483,5495d4897
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60
+5510,5522d4911
+< d 7 i 0 m 60
+< d 8 i 0 m 60
+< d 9 i 0 m 60
+< d 10 i 0 m 60
+< d 11 i 0 m 60
+< d 12 i 0 m 60
+< d 13 i 0 m 60
+< d 14 i 0 m 60
+< d 15 i 0 m 60
+< d 16 i 0 m 60
+< d 17 i 0 m 60
+< d 18 i 0 m 60
+< d 19 i 0 m 60

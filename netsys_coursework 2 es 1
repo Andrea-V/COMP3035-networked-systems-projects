@@ -1,0 +1,158 @@
+-ES 1:
+dig @198.41.0.4 sipb.mit.edu. +norecurse
+
+;; AUTHORITY SECTION:
+edu.			172800	IN	NS	l.edu-servers.net.
+
+;; ADDITIONAL SECTION:
+l.edu-servers.net.	172800	IN	A	192.41.162.30
+
+dig @192.41.162.30 sipb.mit.edu. +norecurse
+
+;; AUTHORITY SECTION:
+mit.edu.		172800	IN	NS usw2.akam.net.
+
+;; ADDITIONAL SECTION:
+usw2.akam.net.		172800	IN	A	184.26.161.64
+
+dig @184.26.161.64 sipb.mit.edu. +norecurse
+
+;; ANSWER SECTION:
+sipb.mit.edu.		1800	IN	A	18.181.0.29
+
+-ES2
+dig @198.41.0.4 sonic.cs.ucl.ac.uk. +norecurse
+
+;; AUTHORITY SECTION:
+uk.			172800	IN	NS	nsd.nic.uk.
+
+;; ADDITIONAL SECTION:
+nsd.nic.uk.		172800	IN	A	156.154.103.3
+
+dig @156.154.103.3  sonic.cs.ucl.ac.uk. +norecurse
+
+;; AUTHORITY SECTION:
+ac.uk.			172800	IN	NS	ns1.surfnet.nl.
+
+dig @haig.cs.ucl.ac.uk ns1.surfnet.nl. +norecurse
+
+;; ANSWER SECTION:
+ns1.surfnet.nl.		1358	IN	A	192.87.106.101
+
+dig @192.87.106.101 sonic.cs.ucl.ac.uk. +norecurse
+
+;; AUTHORITY SECTION:
+ucl.ac.uk.		86400	IN	NS	bas-a.bcc.ac.uk.
+
+;; ADDITIONAL SECTION:
+ns1.cs.ucl.ac.uk.	86400	IN	A	128.16.5.32
+
+dig @128.16.5.32 sonic.cs.ucl.ac.uk. +norecurse
+
+;; ANSWER SECTION:
+sonic.cs.ucl.ac.uk.	86400	IN	A	128.16.6.16
+
+
+
+
+
+dig @198.41.0.4 www.microsoft.com. +norecurse
+
+;; AUTHORITY SECTION:
+com.			172800	IN	NS	a.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+
+dig @192.5.6.30 www.microsoft.com. +norecurse
+
+;; AUTHORITY SECTION:
+microsoft.com.		172800	IN	NS	ns3.msft.net.
+
+;; ADDITIONAL SECTION:
+ns3.msft.net.		172800	IN	A	213.199.180.53
+
+dig @213.199.180.53 www.microsoft.com. +norecurse
+
+;; ANSWER SECTION:
+www.microsoft.com.	3600	IN	CNAME	toggle.www.ms.akadns.net.
+
+dig @198.41.0.4 toggle.www.ms.akadns.net. +norecurse
+
+;; AUTHORITY SECTION:
+net.			172800	IN	NS	m.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+m.gtld-servers.net.	172800	IN	A	192.55.83.30
+
+dig @192.55.83.30 toggle.www.ms.akadns.net. +norecurse
+
+;; AUTHORITY SECTION:
+akadns.net.		172800	IN	NS	a3-129.akadns.net.
+
+;; ADDITIONAL SECTION:
+a3-129.akadns.net.	172800	IN	A	96.7.49.129
+
+dig @96.7.49.129 toggle.www.ms.akadns.net. +norecurse
+
+;; ANSWER SECTION:
+toggle.www.ms.akadns.net. 300	IN	CNAME g.www.ms.akadns.net.
+
+dig @198.41.0.4  g.www.ms.akadns.net. +norecurse
+
+;; AUTHORITY SECTION:
+net.			172800	IN	NS	a.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+
+dig @192.5.6.30 g.www.ms.akadns.net. +norecurse
+
+;; AUTHORITY SECTION:
+akadns.net.		172800	IN	NS	a3-129.akadns.net.
+
+;; ADDITIONAL SECTION:
+a3-129.akadns.net.	172800	IN	A	96.7.49.129
+
+dig @96.7.49.129 g.www.ms.akadns.net. +norecurse
+
+;; ANSWER SECTION:
+g.www.ms.akadns.net.	300	IN  CNAME  lb1.www.ms.akadns.net.
+
+dig @198.41.0.4 lb1.www.ms.akadns.net +norecurse
+
+;; AUTHORITY SECTION:
+net.			172800	IN	NS	a.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+
+dig @192.5.6.30  lb1.www.ms.akadns.net +norecurse
+
+;; AUTHORITY SECTION:
+akadns.net.		172800	IN	NS	a3-129.akadns.net.
+
+;; ADDITIONAL SECTION:
+a3-129.akadns.net.	172800	IN	A	96.7.49.129
+
+dig @96.7.49.129 lb1.www.ms.akadns.net +norecurse
+
+;; ANSWER SECTION:
+lb1.www.ms.akadns.net.	300	IN	A	65.55.57.27
+
+-ES3
+In the resolution of sonic.cs.ucl.ac.uk. one of the dig
+responses didn't include the glue records for the 
+authoritative nameservers mentioned in the
+authority section, so I had to find the nameserver's
+address by myself. I decided to ask my local nameserver
+for the address, but I could also have started from a root
+nameserver.
+
+-ES4
+During the resolution of www.microsoft.com one of the answer
+sections contained a CNAME resource record. So, I had to resolve
+the canonical name from a root server in order to find the address
+of www.microsoft.com. This happened three times, then I finally 
+found the address of the third canonical name, which is therefore
+the address of www.microsoft.com

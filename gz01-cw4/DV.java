@@ -1,0 +1,399 @@
+import java.lang.Math;
+import java.util.Vector;
+import java.util.Collections;
+
+public class DV implements RoutingAlgorithm {
+    
+    static int LOCAL = -1;
+    static int UNKNOWN = -2;
+    static int INFINITY = 60;
+
+	private boolean preverse;
+	private boolean entryexp;
+	private int upinterval;
+
+	private Router router;
+	private Vector<DVRoutingTableEntry> routing_table;
+
+    public DV(){
+		this.preverse=false;
+		this.entryexp=false;
+		this.upinterval=1;
+		this.routing_table=new Vector<DVRoutingTableEntry>();
+    }
+    
+    public void setRouterObject(Router obj){
+		this.router=obj;
+    }
+    
+    public void setUpdateInterval(int u){
+		this.upinterval=u;
+    }
+	
+	public int getUpdateInterval(){
+		return this.upinterval;
+	}
+    
+    public void setAllowPReverse(boolean flag){
+		this.preverse=flag;
+    }
+    
+    public void setAllowExpire(boolean flag){
+		this.entryexp=flag;
+    }
+    
+    public void initalise(){
+		routing_table.add(new DVRoutingTableEntry(router.getId(),LOCAL,0));
+    }
+    
+	/**
+	 * Chooses how to route the packet, sending it to the appropriate interface
+	 * according to the routing table.
+	 */
+    public int getNextHop(int destination){
+		int i=lookup(destination);
+		if(i==UNKNOWN || routing_table.get(i).getMetric()==INFINITY)
+			return UNKNOWN;
+		else
+			return routing_table.get(i).getInterface();
+    }
+
+	/**
+	 * Cleans the table from exipred entries and checks for link failures.
+	 */
+    public void tidyTable(){
+		//checking for links down
+		for(int i=0;i<router.getNumInterfaces();i++)
+			if(!router.getInterfaceState(i))
+				linkFailureUpdate(i);
+
+		//checking for expired entries
+		if(entryexp)
+			removeExpiredEntries();
+    }
+    
+	/**
+	 * Generates a routing packet for the interface iface, if it's not down.
+     */
+    public Packet generateRoutingPacket(int iface){
+		if(!router.getInterfaceState(iface))
+			return null;
+
+        RoutingPacket pkt=new RoutingPacket(router.getId(),Packet.BROADCAST);
+		pkt.setPayload(buildPayloadFromTable(preverse,iface));
+		return pkt;
+    }
+    
+	/**
+	 * Processes an incoming routing packet, updating the routing table
+	 * if necessary.
+	 */
+    public void processRoutingPacket(Packet p, int iface){
+		Vector<Object> payload=p.getPayload().getData();
+
+		for(Object obj : payload){
+			DVRoutingTableEntry	entry=(DVRoutingTableEntry)obj;
+			int new_metric=router.getInterfaceWeight(iface)+entry.getMetric();
+			
+			if(new_metric>INFINITY)
+				new_metric=INFINITY;
+
+			entry.setMetric(new_metric);
+			entry.setInterface(iface);
+			mergeEntry(entry);
+		}
+		Collections.sort(routing_table);
+    }
+
+	/**
+	 * Merges a new entry with the routing table.
+	 */
+	private void mergeEntry(DVRoutingTableEntry entry){
+		int pos=lookup(entry.getDestination());
+		
+		//if i find a new destination, add the entry to the routing table
+		if(pos == UNKNOWN){
+			//if the metric is INFINITY, there's no need to add a new entry.
+			if(entry.getMetric()==INFINITY)
+				return;
+
+			DVRoutingTableEntry new_entry=new DVRoutingTableEntry(
+							entry,getUpdateInterval(),router.getCurrentTime()
+									);
+			routing_table.add(new_entry);
+		}
+		//If i find an entry for the same interface, i update the metric even
+		// if it's worse than the previous value (this may be due to link
+	    //failures)
+		else if(entry.getInterface() == routing_table.get(pos).getInterface()){	
+			routing_table.get(pos).setMetric(entry.getMetric());
+
+			if(routing_table.get(pos).getMetric()<INFINITY){
+				routing_table.get(pos).resetTimeout();
+				entry.setGarbage(false);
+			}
+		}
+		//If I find a better metric, I update the entry
+		else if(entry.getMetric() < routing_table.get(pos).getMetric()){
+			routing_table.get(pos).setMetric(entry.getMetric());
+			routing_table.get(pos).setInterface(entry.getInterface());
+			routing_table.get(pos).resetTimeout();
+			entry.setGarbage(false);
+		}
+	}
+	
+	/**
+	 * Lookups in the routing table for an entry with destination 'dest'.
+	 */
+	private int lookup(int dest){
+		for(int i=0;i<routing_table.size();i++){
+			DVRoutingTableEntry tmp=routing_table.get(i);		
+			
+			if(tmp.getDestination() == dest)		
+				return i;
+		}
+		return UNKNOWN;
+	}
+
+	/**
+	 * Creates the payload from a routing table.
+	*/
+	private Payload buildPayloadFromTable(boolean preverse,int iface){
+		Payload p=new Payload();
+		if(preverse){
+			//first, find the destinations for which iface is used.
+			Vector<Integer> dests=getDestinations(iface);
+
+			for(DVRoutingTableEntry entry:routing_table){
+				DVRoutingTableEntry entry1=new DVRoutingTableEntry(
+								entry,getUpdateInterval(),router.getCurrentTime()
+											);
+				//when i'm sending an entry for one of those destinations,
+				//i announce infinity in the metric.
+				if(dests.contains(entry1.getDestination()))
+					entry1.setMetric(INFINITY);
+
+				p.addEntry(entry1);
+			}
+		}else
+			//if not preverse, send all entries without changing them.
+			for(DVRoutingTableEntry entry:routing_table)
+				p.addEntry(new DVRoutingTableEntry(
+							entry,getUpdateInterval(),router.getCurrentTime()
+				));
+		return p;
+	}
+	
+	/**
+     * Updates the routing table in case of link failures.
+	 */
+	private void linkFailureUpdate(int iface){
+		for(DVRoutingTableEntry entry : routing_table)
+			if(entry.getInterface()==iface)
+				entry.setMetric(DV.INFINITY);
+	}
+
+	/**
+	 * Prints the routing table on the standard output.
+	 */
+    public void showRoutes(){
+		System.out.println("Router "+router.getId());
+		for(DVRoutingTableEntry entry:routing_table){
+			System.out.println(entry);
+		}
+    }
+
+	/**
+	 * Checks and removes the expired entries in the routing table.
+	 */
+	private void removeExpiredEntries(){
+		Vector<DVRoutingTableEntry> to_be_removed=
+											new Vector<DVRoutingTableEntry>();
+
+		//checking for timeout expiration		
+		for(DVRoutingTableEntry entry:routing_table){
+			if(!entry.neverRemove())
+				entry.incTimeout();			
+			
+			if(!entry.isGarbage()){			
+				if(entry.isTimeoutExpired() || entry.getMetric()==INFINITY){
+					entry.setGarbage(true);
+					entry.resetGCTimer();			
+				}
+			}
+		}
+
+		//checking for garbage collector timeout expiration
+		for(DVRoutingTableEntry entry:routing_table){
+			if(entry.isGarbage()){	
+				if(!entry.neverRemove())
+					entry.incGCTimer();		
+				if(entry.isGCTimerExpired())
+					to_be_removed.add(entry);
+			}
+		}
+
+		//actually removing the entries;
+		for(DVRoutingTableEntry entry:to_be_removed)
+			routing_table.remove(entry);
+	}
+
+	/**
+	 * Finds which destinations the interface is used for.
+	 */
+	private Vector<Integer> getDestinations(int iface){
+		Vector<Integer> dests=new Vector<Integer>();		
+		
+		for(DVRoutingTableEntry entry:routing_table)
+			if(entry.getInterface()==iface)	
+				dests.add(entry.getDestination());
+		return dests;
+	}
+}
+
+
+class DVRoutingTableEntry implements 
+								RoutingTableEntry,Comparable<RoutingTableEntry>
+{
+	public int TO_MAX;
+	public int GC_MAX;
+
+	private int time;
+	private int dest;
+	private int iface;
+	private int metric;
+	private int timeout;
+	private int gctimer;
+	private boolean garbage;
+	private boolean never_remove;
+
+	/**
+ 	* this contructor is used for the creation of non-expiring entries.
+	*/
+	public DVRoutingTableEntry(int d, int i, int m){			
+		this.dest=d;
+		this.iface=i;
+		this.metric=m;
+		this.timeout=0;
+		this.gctimer=0;
+		this.garbage=false;
+		this.TO_MAX=1;
+		this.GC_MAX=1;
+		this.time=1;
+		this.never_remove=true;
+	}
+	
+	/**
+    * Standard constructor, used for expiring entries.
+	*/
+	public DVRoutingTableEntry(int d, int i, int m,int uint,int time){			
+		this.dest=d;
+		this.iface=i;
+		this.metric=m;
+		this.timeout=0;
+		this.gctimer=0;
+		this.garbage=false;
+		this.TO_MAX=6*uint;
+		this.GC_MAX=4*uint;
+		this.time=time;
+		this.never_remove=false;
+	}
+	
+	/**
+	* Copy constructor.
+	*/
+	public DVRoutingTableEntry(DVRoutingTableEntry entry,int uint,int time){
+		this.dest=entry.getDestination();
+		this.iface=entry.getInterface();
+		this.metric=entry.getMetric();
+		this.timeout=0;
+		this.gctimer=0;
+		this.garbage=false;
+		this.TO_MAX=6*uint;
+		this.GC_MAX=4*uint;
+		this.time=time;
+		this.never_remove=false;
+	}	
+
+    public int getDestination(){
+		 return this.dest;
+	} 
+    public void setDestination(int d){
+		this.dest=d;
+	}
+    public int getInterface() {
+		return this.iface; 
+	}
+    public void setInterface(int i) {
+		this.iface=i;
+	}
+    public int getMetric() {
+		return this.metric;
+	}
+	
+	public int getTime(){
+		return this.time;
+	}
+	public void setTime(int t){
+		this.time=t;
+	}    
+
+	public void setMetric(int m){
+		this.metric=m;
+	} 
+    public int getTimeout(){
+		return this.timeout;
+	}
+    public void resetTimeout(){
+		this.timeout=0;
+	}
+
+	public void incTimeout(){
+		this.timeout++;
+	}
+    
+	public void resetGCTimer(){
+		this.gctimer=0;
+	}
+
+	public int getGCTimer(){
+		return this.gctimer;	
+	}
+
+	public int incGCTimer(){
+		return this.gctimer++;	
+	}
+
+	public boolean isTimeoutExpired(){
+		return this.timeout>TO_MAX;
+	}
+
+	public boolean isGCTimerExpired(){
+		return this.gctimer>GC_MAX;
+	}
+
+	public void setGarbage(boolean flag){
+		this.garbage=flag;	
+	}
+
+	public boolean isGarbage(){
+		return this.garbage;
+	}
+	
+	public boolean neverRemove(){
+		return this.never_remove;
+	}
+
+	public String toString(){
+		return "d "+dest+" i "+iface+" m "+metric;		
+	}
+
+	/**
+	 * This is used to sort the entries of the routing table,
+     * according to their destination.
+	 */
+	public int compareTo(RoutingTableEntry e){
+		return this.getDestination()-e.getDestination();
+	} 
+}
+

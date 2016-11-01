@@ -1,0 +1,28 @@
+-- QUESTION 1
+-TEST 3
+Starting from time 13, it is cleary visible the bouncing effect between router 2
+ and router 1, with the packet being sent back and forth on the same link
+ several times.
+
+After the link failure at time 35 the network is splitted into two parts:
+ {0 2 1} and {6 5 4 3}.
+
+Starting from time 51 there is bouncing+counting to infinity effect between
+ routers 2 and 1.
+
+
+-TEST 4
+At time 30, the failure of the link (0,3) split the network  in two parts,
+ {012} {34567}: this cause a bouncing + counting to infinity effect
+between router 5 and 6.
+
+
+
+-- QUESTION 2
+-TEST 3
+In this case, the SH/PR optimization has completely resolved the previous issues.
+
+-TEST4
+At time 41 there is a loop between routers {3 5 6}. The SH/PR optimization 
+cannot prevent loops between more than 2 routers. However, the packet travels 
+the loop only once before being dropped.

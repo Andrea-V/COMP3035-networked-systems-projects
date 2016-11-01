@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if diff ./myout ./testout >mismatches ; then
+  echo Same
+else
+  echo Different
+fi
